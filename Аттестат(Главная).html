@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <style>
+        body {
+            margin: 0;
+            background: yellow;
+        }
+
+        .site-header {
+            display: flex;
+            height: 100px;
+            background: black;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .site-title h2 {
+            font-size: 3em;
+            text-shadow: 1px 1px 2px black;
+            color: white;
+        }
+
+        .site-logo img {
+            max-width: 100px;
+            margin-left: 8px;
+        }
+
+        .site-logo {
+            flex: 1;
+        }
+
+        .site-title {
+            flex: 10;
+        }
+
+        .page-nav {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .page-nav div {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            border: 1px solid white;
+            border-top: 0;
+        }
+
+        .page-nav a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background: black;
+            text-decoration: none;
+        }
+
+        .page-nav span {
+            width: 100%;
+            color: yellow;
+            height: 100%;
+            padding-top: 30px;
+        }
+
+        .page-nav a:hover {
+            background: yellow;
+            color: black;
+        }
+
+        .page-nav span:hover {
+            color: black;
+        }
+
+        .container {
+            width: 960px;
+            margin: auto;
+        }
+
+        .service-part .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-part-card {
+            width: 30%;
+            margin: 15px;
+            min-height: 350px;
+            border: .5px solid #b5b3b3;
+            background: white;
+            transition: .4s;
+        }
+
+        .service-part-card-image {
+            max-height: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-part-card img {
+            width: 255px;
+            margin: auto;
+        }
+
+        .service-part-card-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .service-part-card-links a {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-part-card-links span {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 8px;
+        }
+
+        .service-part-card h3 {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .service-part-card h3 a b {
+            opacity: 0;
+        }
+
+        .buy {
+            text-align: center;
+            font-size: 1.7em;
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+
+        .buy span {
+            border: 3px solid red;
+            padding: 8px;
+            color: white;
+            background: red;
+        }
+
+        .buy a {
+            text-decoration: none;
+        }
+
+        .service-part-card-image {
+            width: 255px;
+            height: 280px;
+            margin: auto;
+        }
+
+        .site-footer {
+            background: #4d4d4d;
+        }
+
+        .site-footer>.container {
+            display: flex;
+            align-items: center;
+        }
+
+        .sites {
+            width: 510px;
+            margin: auto;
+        }
+
+        .sites img {
+            width: 60px;
+            margin: 0 0 0 0;
+        }
+
+        .sites img:hover {
+            opacity: .5;
+        }
+
+        .footer {
+            display: flex;
+        }
+
+        .numbers-1 {
+            margin-left: 40px;
+            color: white;
+            margin-top: 3px;
+        }
+
+        .numbers-2 {
+            margin-right: 40px;
+            color: white;
+            margin-top: 3px;
+        }
+
+        .service-part-card:hover {
+            transition: .4s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .test {
+            color: black;
+        }
+
+        .text-see-more {
+            text-align: center;
+            font-size: 1.7em;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        .text-see-more span {
+            border: 1px solid grey;
+            padding: 8px;
+            color: white;
+            background: blue;
+            transition: .4s;
+        }
+
+        .text-see-more a {
+            text-decoration: none;
+        }
+
+        .text-see-more span:hover {
+            transition: .4s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-logo">
+            <img src="Картинки/gamer-logo-with-gamepad_92863-517.jpg" alt="">
+        </div>
+        <div class="site-title">
+            <h2>Game studio</h2>
+        </div>
+    </header>
+    <nav class="page-nav">
+        <div><a href="Аттестат(Главная).html"><span><b>Главная</b></span></a></div>
+        <div><a href="Аттестат(О нас).html"><span><b>О нас</b></span></a></div>
+        <div><a href="Аттестат(Каталог товаров).html"><span><b>Каталог товаров</b></span></a>
+        </div>
+        <div><a href="Аттестат(Наши адреса).html"><span><b>Наши адреса</b></span></a></div>
+    </nav>
+    <div class="service-part">
+        <div class="container">
+            <!-- Начало карточки -->
+            <div class="service-part-card">
+                <h3>
+                    <a class="test" href="#">Minecraft<br>Java Edition</a>
+                </h3>
+                <div class="service-part-card-image">
+                    <a href="#"><img src="Картинки/Minecraft-Java_Keyart.jpg" alt=""></a>
+                </div>
+                <div class="service-part-card-links">
+                    <a class="test" href="#"><span><b>26,95$</b></span></a>
+                </div>
+                <div class="buy">
+                    <a href="https://www.minecraft.net/ru-ru/store/minecraft-java-edition"
+                        target="blank"><span><b>Купить</b></span></a>
+                </div>
+            </div>
+            <!-- Конец карточки -->
+            <!-- Начало карточки -->
+            <div class="service-part-card">
+                <h3>
+                    <a class="test" href="#">Minecraft<br>Windows 10</a>
+                </h3>
+                <div class="service-part-card-image">
+                    <a href="#"><img src="Картинки/Minecraft_cover.png" alt=""></a>
+                </div>
+                <div class="service-part-card-links">
+                    <a class="test" href="#"><span><b>29.99$</b></span></a>
+                </div>
+                <div class="buy">
+                    <a href="https://www.microsoft.com/ru-uz/p/minecraft-for-windows-10-starter-collection/9n4km90ctzt6?=&rtc=2&activetab=pivot:overviewtab"
+                        target="blank"><span><b>Купить</b></span></a>
+                </div>
+            </div>
+            <!-- Конец карточки -->
+            <!-- Начало карточки -->
+            <div class="service-part-card">
+                <h3>
+                    <a class="test" href="#">Portal<br><b>ghbdtn</b></a>
+                </h3>
+                <div class="service-part-card-image">
+                    <a href="#"><img src="Картинки/Portal_standalonebox.jpg" alt=""></a>
+                </div>
+                <div class="service-part-card-links">
+                    <a class="test" href="#"><span><b>6.29$</b></span></a>
+                </div>
+                <div class="buy">
+                    <a href="https://store.steampowered.com/app/400/Portal/?l=russian"
+                        target="blank"><span><b>Купить</b></span></a>
+                </div>
+            </div>
+            <!-- Конец карточки -->
+        </div>
+    </div>
+    <div class="text-see-more">
+        <a href="Аттестат(Каталог товаров).html"><span><b>Смотреть больше</b></span></a>
+    </div>
+    <footer class="site-footer">
+        <div class="footer">
+            <div class="numbers-1">
+                <h3>+998 (97) 704-77-22<br>+998 (97) 703-77-22</h3>
+            </div>
+            <div class="sites">
+                <a href="https://www.tiktok.com/" target="blank"><img src="Картинки/1200px-logotip_tiktoka.svg_.png"
+                        alt=""></a>
+                <a href="https://www.youtube.com/" target="blank"><img
+                        src="Картинки/gratis-png-logo-de-youtube-logo-de-youtube-marketing-en-internet-suscribirse-thumbnail.png"
+                        alt=""></a>
+                <a href="https://discord.com/" target="blank"><img src="Картинки/Discord.png" alt=""></a>
+                <a href="https://www.facebook.com/" target="blank"><img
+                        src="Картинки/facebook-logo-png-transparent-background-300x300.png" alt=""></a>
+                <a href="https://likee.video/" target="blank"><img src="Картинки/Likee.png" alt=""></a>
+                <a href="https://vk.com/" target="blank"><img src="Картинки/vk-com.png" alt=""></a>
+                <a href="https://www.instagram.com/" target="blank"><img src="Картинки/instagram.png" alt=""></a>
+                <a href="https://xn--80affa3aj0al.xn--80asehdb/" target="blank"><img
+                        src="Картинки/Telegram_Messenger.png" alt=""></a>
+            </div>
+            <div class="numbers-2">
+                <h3>+998 (90) 805-65-03<br>+998 (91) 192-07-05</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
